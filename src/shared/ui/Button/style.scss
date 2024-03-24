@@ -1,0 +1,45 @@
+@import '/src/shared/styles/style.scss';
+
+.button {
+  @include button;
+  color: $c-text-teriary;
+
+  padding: 1.3rem 2.8rem;
+  border: .2rem solid $c-accent-primary;
+  background-color: $c-accent-primary;
+  border-radius: .3rem;
+
+  transition: color $tt-primary ease, background-color $tt-primary, border-color $tt-primary ease;
+
+  @include hover {
+    &:hover {
+      background-color: $c-primary-hover;
+      border-color: $c-primary-hover;
+    }
+  }
+
+  &:disabled {
+    background-color: $c-text-secondary;
+    border-color: $c-text-secondary;
+    color: $c-text-primary;
+    cursor: not-allowed;
+  }
+
+  &--theme-secondary {
+    background-color: transparent;
+    color: $c-accent-primary;
+
+    @include hover {
+      &:hover {
+        background-color: transparent;
+        color: $c-primary-hover;
+      }
+    }
+
+    &:disabled {
+      border-color: $c-secondary;
+      background-color: transparent;
+      color: $c-text-primary;
+    }
+  }
+}

@@ -1,0 +1,45 @@
+// breakpoints
+$bp-mobile: 360;
+$bp-tablet: 768;
+$bp-desktop: 1440;
+
+// fonts
+$f-postfix: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  sans-serif;
+
+$f-primary: 'Jost', $f-postfix;
+$f-secondary: 'Lato', $f-postfix;
+
+// colors
+$c-primary: #1C8785;
+$c-primary-hover: #0F5756;
+$c-secondary: #776F6F;
+
+$c-success: #00826B;
+$c-error: #DD1818;
+
+$c-text-primary: #2D2828;
+$c-text-secondary: #444142;
+$c-text-teriary: #FFFFFF;
+$c-text-quaternary: #CCD9D9;
+
+$c-accent-primary: #1C8785;
+$c-accent-secondary: #263E3E;
+
+$c-other-primary: #0DCBC8;
+$c-other-secondary: #151919;
+
+$c-line-primary: #074040;
+$c-line-secondary: #0F3030;
+
+$c-gradient-1: linear-gradient(180.00deg, rgb(21, 28, 28), rgb(5, 76, 75) 100%);
+$c-gradient-2: linear-gradient(270.00deg, rgb(255, 255, 255) 0%, rgb(21, 25, 25) 79.435%);
+$c-gradient-3: linear-gradient(90.00deg, rgb(21, 25, 25) 18.398%, rgb(28, 135, 133) 100%);
+$c-gradient-4: linear-gradient(90.00deg, rgb(21, 25, 25) 18.398%, rgb(23, 53, 52) 100%);
+$c-gradient-5: linear-gradient(90.00deg, rgb(19, 27, 27), rgb(16, 35, 35) 100%);
+$c-gradient-6: linear-gradient(180.00deg, rgb(255, 255, 255), rgb(21, 25, 25) 79.551%);
+$c-gradient-7: linear-gradient(180.00deg, rgb(30, 159, 157) -32.737%, rgb(21, 25, 25) 86.474%);
+
+// transition time
+$tt-primary: .15s;

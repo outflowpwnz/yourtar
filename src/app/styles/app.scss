@@ -1,0 +1,22 @@
+@import '/src/shared/styles/style.scss';
+
+
+html {
+  font-size: calc(100vw / $bp-mobile * 10);
+
+  @include br-tablet {
+    font-size: calc(100vw / $bp-tablet * 10);
+  }
+
+  @include br-desktop {
+    font-size: 10px
+  }
+}
+
+
+body {
+  font-weight: 400;
+  font-family: $f-primary;
+  line-height: 120%;
+  background-color: $c-other-secondary;
+}

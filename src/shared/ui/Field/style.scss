@@ -1,0 +1,56 @@
+@import '/src/shared/styles/style.scss';
+
+.field {
+  position: relative;
+  width: fit-content;
+
+  &__label {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 1.6rem;
+    opacity: 0;
+    transform: scale(0);
+    color: $c-text-quaternary;
+    transition: top $tt-primary ease, left $tt-primary ease, opacity $tt-primary ease, font-size $tt-primary ease, color $tt-primary ease, transform $tt-primary ease;
+  }
+
+  &__input {
+    transition: border-color $tt-primary ease, color $tt-primary ease;
+    background-color: transparent;
+    border: .2rem solid $c-accent-primary;
+    border-radius: .3rem;
+    padding: 2rem 1.4rem .5rem;
+    color: $c-text-quaternary;
+    @include p3;
+  }
+
+  &__input:placeholder-shown+&__label {
+    opacity: 1;
+    top: 1.45rem;
+    transform: scale(1);
+    @include p3;
+  }
+
+  &__input:focus+&__label {
+    opacity: 1;
+    top: 1.45rem;
+    top: .5rem;
+    transform: scale(1);
+    @include placeholder;
+  }
+
+  &__input:focus {
+    color: $c-text-teriary;
+  }
+
+  @include hover {
+    &:hover &__label {
+      color: $c-text-teriary;
+    }
+
+    &:hover &__input {
+      border-color: $c-primary-hover;
+    }
+  }
+}
