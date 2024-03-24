@@ -3,6 +3,7 @@
 .field {
   position: relative;
   width: fit-content;
+  min-height: 5rem;
 
   &__label {
     position: absolute;
@@ -16,11 +17,11 @@
   }
 
   &__input {
-    transition: border-color $tt-primary ease, color $tt-primary ease;
+    transition: border-color $tt-primary ease, color $tt-primary ease, padding $tt-primary ease;
     background-color: transparent;
     border: .2rem solid $c-accent-primary;
     border-radius: .3rem;
-    padding: 2rem 1.4rem .5rem;
+    padding: 1.25rem 3.8rem 1.25rem 1.4rem;
     color: $c-text-quaternary;
     @include p3;
   }
@@ -42,6 +43,8 @@
 
   &__input:focus {
     color: $c-text-teriary;
+    border-color: $c-primary-hover;
+    padding: 2rem 3.8rem .5rem 1.4rem;
   }
 
   @include hover {
@@ -52,5 +55,28 @@
     &:hover &__input {
       border-color: $c-primary-hover;
     }
+  }
+
+  &__error-message {
+    border-radius: .3rem;
+    position: absolute;
+    bottom: .5rem;
+    left: 50%;
+    transform: translateY(100%) translateX(-50%);
+    background-color: $c-error-secondary;
+    padding: .5rem 2rem;
+    width: max-content;
+    max-width: 100%;
+    color: $c-text-teriary;
+    @include p3;
+  }
+
+  &__error-icon {
+    position: absolute;
+    right: 1.6rem;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 1.8rem;
+    height: 1.8rem;
   }
 }

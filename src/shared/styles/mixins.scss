@@ -21,3 +21,8 @@
     @content;
   }
 }
+
+@mixin visually-hidden {
+  position: fixed;
+  transform: scale(0);
+}

@@ -1,1 +1,2 @@
-export * from './useBemCN'
+export * from './useBemCN';
+export * from './useSleep';

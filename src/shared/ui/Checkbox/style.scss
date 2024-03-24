@@ -1,0 +1,62 @@
+@import '/src//shared/styles/style.scss';
+
+.checkbox {
+  width: fit-content;
+  position: relative;
+  cursor: pointer;
+  min-height: 2.1rem;
+
+
+  &__input {
+    @include visually-hidden;
+  }
+
+  &__label {
+    cursor: pointer;
+    padding-left: 1.8rem;
+
+    &:before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: .15rem;
+      width: 1.8rem;
+      height: 1.8rem;
+      border-radius: .2rem;
+      border: .2rem solid $c-text-quaternary;
+
+      transition: border $tt-primary ease;
+    }
+  }
+
+  &__icon-wrapper {
+    position: absolute;
+    top: .15rem;
+    width: 1.8rem;
+    height: 1.8rem;
+
+    & svg {
+      transition: stroke $tt-primary ease;
+      stroke: $c-text-quaternary;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__input:disabled,
+  &__input:disabled+&__label {
+    cursor: not-allowed;
+  }
+
+  &__input:disabled+&__label {
+    &:before {
+      border-color: $c-text-secondary;
+    }
+  }
+
+  &__input:disabled+&__label &__icon-wrapper {
+    svg {
+      stroke: $c-text-secondary;
+    }
+  }
+}

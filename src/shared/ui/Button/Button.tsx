@@ -1,10 +1,13 @@
-import { ButtonHTMLAttributes, useMemo } from 'react';
+import { ButtonHTMLAttributes } from 'react';
+import { useBemCN } from 'shared';
+import { ReactComponent as ArrowIconSmall } from 'shared/assets/icons/arrow-small.svg'
 import './style.scss';
-import { useBemCN } from '../../hooks';
 
 export enum EButtonTheme {
   PRIMARY = 'primary',
-  SECONDARY = 'secondary'
+  SECONDARY = 'secondary',
+  TERTIARY = 'tertiary',
+  QUATERNARY = 'quaternary'
 }
 
 export enum EButtonSize {
@@ -26,6 +29,12 @@ export const Button = (props: TProps) => {
       {...props}
     >
       {props.label}
+      {
+        props.theme === EButtonTheme.QUATERNARY &&
+        <div className={buttonBlock('icon-wrapper')}>
+          <ArrowIconSmall />
+        </div>
+      }
     </button>
   )
 }

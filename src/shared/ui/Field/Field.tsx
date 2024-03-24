@@ -1,14 +1,18 @@
-import { Dispatch, FormEvent, HTMLInputTypeAttribute } from 'react';
-import { useBemCN } from '../../hooks';
-// import { ReactComponent as ErrorIcon } from '@/shared/'
-// import {  } from '@/'
-import { } from '@/shared/'
+import { Dispatch, FormEvent } from 'react';
+import { useBemCN } from 'shared';
+import { ReactComponent as FieldErrorIcon } from 'shared/assets/icons/field-error.svg'
 import './style.scss';
 import { FadeInOut } from '../FadeInOut/FadeInOut';
 
+export enum EFieldType {
+  TEXT = 'text',
+  PASSWORD = 'password',
+  EMAIL = 'email'
+}
+
 type Props = {
   label: string;
-  type?: HTMLInputTypeAttribute;
+  type?: EFieldType;
   id: string;
   value: string;
   onInput: Dispatch<React.SetStateAction<string>>
@@ -29,9 +33,10 @@ export const Field = (props: Props) => {
       <input
         placeholder=' '
         id={props.id}
+        value={props.value}
         onInput={onInput}
         className={fieldBlock('input')}
-        type={props.type || 'text'}
+        type={props.type || EFieldType.TEXT}
       />
       <label
         htmlFor={props.id}
@@ -39,6 +44,11 @@ export const Field = (props: Props) => {
       >
         {props.label}
       </label>
+      <FadeInOut isOpen={Boolean(props.isError)}>
+        <div className={fieldBlock('error-icon')}>
+          <FieldErrorIcon />
+        </div>
+      </FadeInOut>
       <FadeInOut isOpen={Boolean(props.isError)}>
         <span className={fieldBlock('error-message')}>
           {props.errorMessage}
