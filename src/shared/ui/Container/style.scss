@@ -1,0 +1,15 @@
+@import '/src/shared/styles/style.scss';
+
+.container {
+  padding: 0 1.6rem;
+
+  @include br-tablet {
+    padding: 0 4rem;
+  }
+
+  @include br-desktop {
+    width: 120rem;
+    padding: 0;
+    margin: 0 auto;
+  }
+}

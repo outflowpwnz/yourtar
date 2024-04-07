@@ -1,0 +1,31 @@
+@import '/src/shared/styles/style.scss';
+
+.features {
+  background-image: $c-gradient-5;
+  padding: 3rem 0;
+
+  &__list {
+    display: grid;
+    grid-template-columns: 7.4rem 12.7rem 7.4rem;
+    justify-content: space-between;
+  }
+
+
+  @include br-tablet {
+    &__list {
+      grid-template-columns: repeat(3, 17.4rem);
+    }
+
+  }
+
+  ;
+
+  @include br-desktop {
+    &__list {
+      grid-template-columns: repeat(3, 20.4rem);
+    }
+
+  }
+
+  ;
+}

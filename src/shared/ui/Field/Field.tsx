@@ -10,7 +10,7 @@ export enum EFieldType {
   EMAIL = 'email'
 }
 
-type Props = {
+type TProps = {
   label: string;
   type?: EFieldType;
   id: string;
@@ -20,7 +20,7 @@ type Props = {
   errorMessage?: string;
 }
 
-export const Field = (props: Props) => {
+export const Field = (props: TProps) => {
   const fieldBlock = useBemCN('field')
   const onInput = (event: FormEvent<HTMLInputElement>) => {
     const { value } = event.target as HTMLInputElement

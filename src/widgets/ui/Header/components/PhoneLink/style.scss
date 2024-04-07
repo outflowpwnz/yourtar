@@ -1,0 +1,22 @@
+@import '/src/shared/styles/style.scss';
+
+.phone-link {
+  &__label {
+    display: none;
+  }
+
+
+  @include br-tablet {
+    &__link {
+      display: flex;
+      align-items: center;
+    }
+
+    &__label {
+      display: block;
+      @include p2;
+      color: $c-text-teriary;
+      margin-left: .4rem;
+    }
+  }
+}

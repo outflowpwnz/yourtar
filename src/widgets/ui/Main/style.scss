@@ -1,0 +1,95 @@
+@import '/src/shared/styles/style.scss';
+
+.main {
+  padding-top: 6.5rem;
+  background-image: url('/shared/assets/images/main-background-mobile.png');
+  background-repeat: no-repeat;
+  background-position-x: right;
+  background-position-y: top;
+  background-size: 30.2rem 33.9rem;
+
+  &__title {
+    text-transform: uppercase;
+    @include h1-secondary;
+    color: $c-text-teriary;
+    margin-bottom: 1.2rem;
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  &__title-accent {
+    color: $c-accent-primary;
+  }
+
+  &__text {
+    @include p3;
+    margin-bottom: 21.4rem;
+    color: $c-text-quaternary;
+  }
+
+  &__actions {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  &__actions-item {
+    &>* {
+      width: 100%;
+    }
+  }
+
+  @include br-tablet {
+    min-height: 40rem;
+    padding-top: 7.2rem;
+    background-image: url('/shared/assets/images/main-background-tablet.png');
+    background-size: 52.9rem 40rem;
+
+
+    &__title {
+      display: block;
+      max-width: 50.3rem;
+      @include h2;
+      margin-bottom: 1rem;
+    }
+
+    &__text {
+      max-width: 32rem;
+      margin-bottom: 2rem;
+    }
+
+    &__actions {
+      grid-template-columns: repeat(2, max-content);
+      gap: 2rem;
+    }
+
+    &__actions-item {
+      &>* {
+        width: fit-content;
+      }
+    }
+  }
+
+
+  @include br-desktop {
+    max-width: 120rem;
+    margin: 0 auto;
+    min-height: 62rem;
+    padding-top: 13.2rem;
+    background-image: url('/shared/assets/images/main-background-desktop.png');
+    background-size: 89rem 62rem;
+
+
+    &__title {
+      @include h1;
+      max-width: 74.8rem;
+      margin-bottom: 2rem;
+    }
+
+    &__text {
+      margin-bottom: 7rem;
+      max-width: 36.5rem;
+      @include p2;
+    }
+  }
+}

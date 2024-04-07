@@ -1,0 +1,8 @@
+@import '/src/shared/styles/style.scss';
+
+.mobile-menu-item {
+  &__link {
+    color: $c-text-quaternary;
+    @include p2;
+  }
+}

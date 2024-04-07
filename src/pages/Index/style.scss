@@ -1,0 +1,30 @@
+@import '/src/shared/styles/style.scss';
+
+.index {
+  &__main {
+    margin-top: 9.5rem;
+    margin-bottom: 13rem;
+  }
+
+  &__features {
+    margin-bottom: 13rem;
+  }
+
+  @include br-tablet {
+    &__main {
+      margin-top: 6rem;
+      margin-bottom: 13rem;
+    }
+  }
+
+  @include br-desktop {
+    &__main {
+      margin-top: 3rem;
+      margin-bottom: 15rem;
+    }
+
+    &__features {
+      margin-bottom: 15rem;
+    }
+  }
+}

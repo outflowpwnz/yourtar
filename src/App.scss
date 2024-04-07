@@ -1,39 +1,39 @@
 @import '/src/app/styles/style.scss';
 
-ul {
-  width: 110px;
+// ul {
+//   width: 110px;
 
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: min-content min-content min-content;
-  grid-template-areas:
-    'a b'
-    'c b'
-    'c d';
+//   display: grid;
+//   grid-template-columns: 1fr 1fr;
+//   grid-template-rows: min-content min-content min-content;
+//   grid-template-areas:
+//     'a b'
+//     'c b'
+//     'c d';
 
-  gap: 10px;
-}
+//   gap: 10px;
+// }
 
-li {
-  background-color: #fff;
-  width: 50px;
-  min-height: 50px;
+// li {
+//   background-color: #fff;
+//   width: 50px;
+//   min-height: 50px;
 
-  &:nth-of-type(1) {
-    grid-area: a;
-    min-height: 25px;
-  }
+//   &:nth-of-type(1) {
+//     grid-area: a;
+//     min-height: 25px;
+//   }
 
-  &:nth-of-type(2) {
-    grid-area: b;
-  }
+//   &:nth-of-type(2) {
+//     grid-area: b;
+//   }
 
-  &:nth-of-type(3) {
-    min-height: 75px;
-    grid-area: c;
-  }
+//   &:nth-of-type(3) {
+//     min-height: 75px;
+//     grid-area: c;
+//   }
 
-  &:nth-of-type(4) {
-    grid-area: d;
-  }
-}
+//   &:nth-of-type(4) {
+//     grid-area: d;
+//   }
+// }

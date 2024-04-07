@@ -1,0 +1,11 @@
+@import '/src/shared/styles/style.scss';
+
+.menu {
+  &__list {
+    display: flex;
+
+    &>*:not(:last-of-type) {
+      margin-right: 2.8rem;
+    }
+  }
+}

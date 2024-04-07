@@ -1,0 +1,49 @@
+@import '/src/shared/styles/style.scss';
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background-color: $c-other-secondary;
+
+  padding-top: 4rem;
+  padding-bottom: 1rem;
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__menu {
+    display: none;
+  }
+
+  &__mobile-menu {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  &__additionals {
+    display: flex;
+
+    &>*:not(:first-of-type) {
+      margin-left: 3rem;
+    }
+  }
+
+  @include br-desktop {
+    &__menu-button {
+      display: none;
+    }
+
+    &__mobile-menu {
+      display: none;
+    }
+
+    &__menu {
+      display: block;
+    }
+  }
+}

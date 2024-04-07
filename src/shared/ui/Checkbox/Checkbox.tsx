@@ -3,7 +3,7 @@ import { FadeInOut, useBemCN } from 'shared';
 import { ReactComponent as CheckIcon } from 'shared/assets/icons/check.svg';
 import './style.scss';
 
-type Props = {
+type TProps = {
   isChecked: boolean,
   label?: string;
   isDisabled?: boolean;
@@ -11,7 +11,7 @@ type Props = {
   onChecked: Dispatch<React.SetStateAction<boolean>>
 }
 
-export const Checkbox = (props: Props) => {
+export const Checkbox = (props: TProps) => {
   const checkboxBlock = useBemCN('checkbox');
 
   const onChange = () => {
