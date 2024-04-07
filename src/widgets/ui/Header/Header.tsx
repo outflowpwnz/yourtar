@@ -9,7 +9,7 @@ import { PhoneLink } from "./components/PhoneLink/PhoneLink";
 export const Header = () => {
   const headerBlock = useBemCN('header')
 
-  const [isOpen, setIsOpen] = useState<boolean>(true)
+  const [isOpen, setIsOpen] = useState<boolean>(false)
 
   const toggleMenu = () => {
     setIsOpen(!isOpen)
