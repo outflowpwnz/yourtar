@@ -1,0 +1,25 @@
+@import '/src/shared/styles/style.scss';
+
+.custom-link {
+  display: inline-flex;
+  align-items: center;
+  @include p4-secondary;
+  color: $c-accent-primary;
+
+  &__icon {
+    width: 1.8rem;
+    height: 1.8rem;
+
+    & svg {
+      width: 1.8rem;
+      height: 1.8rem;
+    }
+
+    margin-right: 1rem;
+  }
+
+  &--theme-secondary {
+    @include p3;
+    color: $c-text-quaternary;
+  }
+}

@@ -1,0 +1,34 @@
+@import '/src/shared/styles/style.scss';
+
+.choose-tasks {
+  &__title {
+    @include h2-secondary;
+    color: $c-text-teriary;
+    max-width: 25.3rem;
+
+    margin-bottom: 1.5rem;
+  }
+
+  &__selects {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  &__button {
+    margin-top: 1rem;
+  }
+
+  @include br-tablet {
+    &__title {
+      @include h3;
+      margin-bottom: 2rem;
+    }
+
+    &__selects {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.2rem;
+    }
+  }
+}

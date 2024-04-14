@@ -1,0 +1,56 @@
+@import '/src/shared/styles/style.scss';
+
+.discuss-project {
+  &__form {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-rows: min-content;
+    gap: 1.2rem;
+  }
+
+  &__title {
+    text-transform: uppercase;
+    @include h1-secondary;
+    color: $c-text-teriary;
+    margin-bottom: 1.5rem;
+  }
+
+  &__subtitle {
+    color: $c-text-quaternary;
+    @include p3;
+    margin-bottom: 3.5rem;
+  }
+
+  @include br-tablet {
+    &__content {
+      margin: 0 auto;
+      max-width: 39rem;
+    }
+
+    &__title,
+    &__subtitle {
+      text-align: center;
+    }
+
+    &__title {
+      @include h2;
+      margin-bottom: 3rem;
+    }
+
+    &__subtitle {
+      @include p2;
+      margin-bottom: 2rem;
+    }
+
+    &__form {
+      padding: 0 4rem;
+    }
+  }
+
+  @include br-desktop {
+    &__title {
+      margin-bottom: 4rem;
+    }
+  }
+}

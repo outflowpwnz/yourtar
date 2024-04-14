@@ -1,0 +1,18 @@
+@import '/src/shared/styles/style.scss';
+
+.text {
+  p {
+    @include p3;
+    color: $c-text-quaternary;
+
+    &+p {
+      margin-top: 1.2rem;
+    }
+  }
+
+  @include br-tablet {
+    p+p {
+      margin-top: 1.4rem;
+    }
+  }
+}

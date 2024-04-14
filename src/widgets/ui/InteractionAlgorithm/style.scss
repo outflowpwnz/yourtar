@@ -1,0 +1,25 @@
+@import '/src/shared/styles/style.scss';
+
+.interaction-algorithm {
+  &__title {
+    @include h1-secondary;
+    text-transform: uppercase;
+
+    color: $c-text-teriary;
+
+    margin-bottom: 3rem;
+  }
+
+  @include br-tablet {
+    &__title {
+      @include h2;
+      padding-left: 3rem;
+    }
+  }
+
+  @include br-desktop {
+    &__title {
+      padding-left: 4rem;
+    }
+  }
+}

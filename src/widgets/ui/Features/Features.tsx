@@ -39,7 +39,7 @@ export const Features = () => {
         <ul
           className={featuresBlock('list')}
         >
-          {features.map((feature) => <li><Feature feature={feature} /></li>)}
+          {features.map((feature, index) => <li key={index}><Feature feature={feature} /></li>)}
         </ul>
       </Container>
     </section>

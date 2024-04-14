@@ -1,15 +1,8 @@
-import { Dispatch } from 'react'
-import { FadeInOut, useBemCN } from 'shared';
+import { FadeInOut, TCheckbox, useBemCN } from 'shared';
 import { ReactComponent as CheckIcon } from 'shared/assets/icons/check.svg';
 import './style.scss';
 
-type TProps = {
-  isChecked: boolean,
-  label?: string;
-  isDisabled?: boolean;
-  id: string;
-  onChecked: Dispatch<React.SetStateAction<boolean>>
-}
+type TProps = TCheckbox
 
 export const Checkbox = (props: TProps) => {
   const checkboxBlock = useBemCN('checkbox');
@@ -41,7 +34,11 @@ export const Checkbox = (props: TProps) => {
             <CheckIcon />
           </div>
         </FadeInOut>
-        {props.label || ''}
+        <p
+          className={checkboxBlock('children')}
+        >
+          {props.label || props.children}
+        </p>
       </label>
     </div>
   )

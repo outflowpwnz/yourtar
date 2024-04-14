@@ -1,0 +1,113 @@
+@import '/src/shared/styles/style.scss';
+
+.about-project {
+  &__content {
+    padding-top: 9.4rem;
+    background-image: url('/shared/assets/icons/about-project-mobile.svg');
+    background-repeat: no-repeat;
+    background-size: 20.8rem 9.4rem;
+    background-position: top right;
+  }
+
+  &__title {
+    margin-top: 2rem;
+    color: $c-text-teriary;
+    @include h1-secondary;
+    text-transform: uppercase;
+    margin-bottom: 3rem;
+  }
+
+  &__text-content {
+    margin-bottom: 3rem;
+  }
+
+  &__video-label {
+    @include p2;
+    color: $c-text-teriary;
+    margin-bottom: 2rem;
+  }
+
+  @include br-tablet {
+    &__content {
+      background-image: url('/shared/assets/icons/about-project-tablet.svg');
+      background-size: 15.7rem 7.1rem;
+      background-position: 0 7rem;
+
+      padding-top: 0;
+    }
+
+    &__text-content {
+      padding-left: 18.7rem;
+      margin-bottom: 3rem;
+    }
+
+    &__title {
+      @include h2;
+      margin-top: 0;
+      padding-left: 3rem;
+      margin-bottom: 3rem;
+    }
+
+    &__video {
+      display: grid;
+      grid-template-columns: 42.3rem 1fr;
+      gap: 2rem;
+    }
+
+    &__video-label {
+      order: 1;
+      align-self: start;
+      position: relative;
+      padding-top: 2rem;
+      text-align: center;
+      padding-bottom: 11.2rem;
+
+      &::before {
+        content: '';
+
+        position: absolute;
+        bottom: 0;
+        left: 4.2rem;
+        width: 9rem;
+        height: 9rem;
+        background-image: url('/shared/assets/icons/decorative-arrow.svg');
+        background-repeat: no-repeat;
+        background-size: contain;
+
+      }
+    }
+  }
+
+  @include br-desktop {
+
+    &__content {
+      background-image: url('/shared/assets/icons/about-project-desktop.svg');
+      background-size: 34.9rem 15.8rem;
+      background-position: top left;
+    }
+
+    &__text-content {
+      padding-left: 40.9rem;
+      margin-bottom: 6rem;
+    }
+
+    &__title {
+      padding-left: 4rem;
+      margin-bottom: 4rem;
+    }
+
+    &__video {
+      grid-template-columns: 89.4rem 1fr;
+      gap: 4.2rem;
+    }
+
+
+    &__video-label {
+      padding-top: 12rem;
+
+      &:before {
+        left: 0;
+      }
+    }
+  }
+}

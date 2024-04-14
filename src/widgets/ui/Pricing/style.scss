@@ -1,0 +1,91 @@
+@import '/src/shared/styles/style.scss';
+
+.pricing {
+  &__title {
+    @include h1-secondary;
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
+    color: $c-text-teriary;
+  }
+
+  &__subtitle {
+    @include p3;
+    color: $c-text-quaternary;
+    margin-bottom: 3.5rem;
+  }
+
+  &__choose-platform {
+    margin-bottom: 3.6rem;
+  }
+
+  &__choose-tasks {
+    margin-bottom: 3.6rem;
+  }
+
+  &__choose-role {
+    margin-bottom: 3.6rem;
+  }
+
+  &__cost-and-terms {
+    margin-bottom: 3rem;
+  }
+
+  @include br-tablet {
+    &__title {
+      padding-left: 3rem;
+      @include h2;
+      margin-bottom: 1rem;
+    }
+
+    &__subtitle {
+      margin-bottom: 4rem;
+    }
+
+
+    &__choose-role,
+    &__cost-and-terms,
+    &__choose-tasks,
+    &__choose-platform {
+      max-width: 57.4rem;
+    }
+  }
+
+  @include br-desktop {
+    &__content {
+      display: grid;
+      grid-template-columns: 57.4rem 1fr;
+      column-gap: 4rem;
+    }
+
+    &__title {
+      grid-column: span 2;
+    }
+
+    &__subtitle {
+      max-width: 64.8rem;
+      grid-column: span 2;
+    }
+
+    &__choose-platform {
+      grid-column: 1;
+    }
+
+    &__choose-tasks {
+      grid-column: 1;
+    }
+
+    &__choose-role {
+      grid-column: 1;
+    }
+
+    &__cost-and-terms {
+      grid-column: 1;
+    }
+
+    &__results {
+      margin-top: 5.2rem;
+      grid-row: 3/6;
+      grid-column: 2;
+    }
+  }
+}

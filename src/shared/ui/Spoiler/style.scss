@@ -16,7 +16,7 @@
   }
 
   &__label {
-    @include p1;
+    @include p2;
     color: $c-text-teriary;
   }
 
@@ -77,6 +77,12 @@
   @include hover {
     &:hover &__header {
       background-color: $c-line-secondary;
+    }
+  }
+
+  @include br-tablet {
+    &__label {
+      @include p1;
     }
   }
 }

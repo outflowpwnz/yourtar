@@ -24,9 +24,11 @@ export const Spoiler = (props: TProps) => {
 
   const recalcValueNodeRefHeight = useCallback(async () => {
     if (valueNodeRef.current) {
+      const rect = valueNodeRef.current.getBoundingClientRect()
       const contentNodeCopy = valueNodeRef.current.cloneNode(true) as HTMLDivElement;
       contentNodeCopy.style.transition = ''
       contentNodeCopy.style.height = 'fit-content'
+      contentNodeCopy.style.width = `${rect.width}px`
       contentNodeCopy.style.visibility = 'hidden'
       document.body.append(contentNodeCopy)
       const scrollHeight = contentNodeCopy.scrollHeight

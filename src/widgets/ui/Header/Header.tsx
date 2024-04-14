@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Container, IconButton, useBemCN } from "shared"
+import { Container, EBlockId, IconButton, useBemCN } from "shared"
 import { ReactComponent as MenuIcon } from "shared/assets/icons/menu.svg"
 import { Logo, Menu, MobileMenu } from './components';
 import { TMenuItem } from "widgets";
@@ -17,23 +17,23 @@ export const Header = () => {
 
   const menuItems: TMenuItem[] = [
     {
-      to: '#id',
+      to: `#${EBlockId.ABOUT_PROJECT}`,
       label: 'О проекте'
     },
     {
-      to: '#id',
+      to: `#${EBlockId.FEATURES}`,
       label: 'Преимущества'
     },
     {
-      to: '#id',
+      to: `#${EBlockId.INTERCATION_ALGORITHM}`,
       label: 'Этапы работы'
     },
     {
-      to: '#id',
+      to: `#${EBlockId.PRICING}`,
       label: 'Расчет стоимости'
     },
     {
-      to: '#id',
+      to: `#${EBlockId.DISCUSS}`,
       label: 'Связь с нами'
     }
   ]

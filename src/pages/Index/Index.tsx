@@ -1,6 +1,5 @@
-import { Main } from "widgets"
+import { AboutProject, Main, Features, Benefits, DiscussProject, FAQ, InteractionAlgorithm, Pricing } from "widgets"
 import { useBemCN } from "shared"
-import { Features } from "widgets"
 
 import './style.scss'
 export const Index = () => {
@@ -18,6 +17,36 @@ export const Index = () => {
         className={indexBlock('features')}
       >
         <Features />
+      </div>
+      <div
+        className={indexBlock('about-project')}
+      >
+        <AboutProject />
+      </div>
+      <div
+        className={indexBlock('benefits')}
+      >
+        <Benefits />
+      </div>
+      <div
+        className={indexBlock('pricing')}
+      >
+        <Pricing />
+      </div>
+      <div
+        className={indexBlock('interaction-algorithm')}
+      >
+        <InteractionAlgorithm />
+      </div>
+      <div
+        className={indexBlock('faq')}
+      >
+        <FAQ />
+      </div>
+      <div
+        className={indexBlock('discuss-project')}
+      >
+        <DiscussProject />
       </div>
     </div>
   )

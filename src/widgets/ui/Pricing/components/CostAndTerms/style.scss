@@ -1,0 +1,18 @@
+@import '/src/shared/styles/style.scss';
+
+.cost-and-terms {
+  &__title {
+    @include h2-secondary;
+    color: $c-text-teriary;
+    margin-bottom: 2.6rem;
+    max-width: 24.8rem;
+  }
+
+  @include br-tablet {
+    &__title {
+      max-width: 27.2rem;
+      @include h3;
+      margin-bottom: 2rem;
+    }
+  }
+}

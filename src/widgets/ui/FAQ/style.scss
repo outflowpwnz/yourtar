@@ -1,0 +1,62 @@
+@import '/src/shared/styles/style.scss';
+
+.faq {
+  &__content {
+    padding-top: 8.7rem;
+
+    background-image: url('/shared/assets/icons/faq-mobile.svg');
+    background-repeat: no-repeat;
+    background-size: 16.3rem 6.7rem;
+    background-position: top right;
+  }
+
+  &__title {
+    margin-bottom: 3rem;
+    @include h1-secondary;
+    color: $c-text-teriary;
+    text-transform: uppercase;
+  }
+
+  &__list {
+    display: grid;
+    gap: 1rem;
+  }
+
+
+  @include br-tablet {
+    &__content {
+      padding-top: 0;
+      background-image: url('/shared/assets/icons/faq-tablet.svg');
+      background-position-y: 9rem;
+      background-size: 15.7rem 6.4rem;
+    }
+
+    &__title {
+      padding-left: 3rem;
+      @include h2;
+    }
+
+    &__list {
+      max-width: 51.1rem
+    }
+  }
+
+
+  @include br-desktop {
+    &__title {
+      padding-left: 4rem;
+      margin-bottom: 4rem;
+    }
+
+    &__list {
+      max-width: 89.4rem
+    }
+
+    &__content {
+      background-image: url('/shared/assets/icons/faq-desktop.svg');
+      background-size: 24.6rem 10rem;
+      background-position-y: 0;
+      padding-top: 0;
+    }
+  }
+}

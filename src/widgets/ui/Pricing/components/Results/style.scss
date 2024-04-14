@@ -1,0 +1,112 @@
+@import '/src/shared/styles/style.scss';
+
+.results {
+  background-image: $c-gradient-1;
+  border-radius: .4rem;
+  padding: 2.5rem 1.6rem;
+
+  &__title {
+    @include h2-secondary;
+    color: $c-text-teriary;
+    margin-bottom: .5rem;
+  }
+
+  &__money {
+    color: $c-other-primary;
+    @include h2-tertiary;
+    margin-bottom: 2rem;
+  }
+
+  &__table {
+    margin-bottom: 2rem;
+    table-layout: fixed;
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  th:nth-of-type(1) {
+    width: 12.2rem;
+  }
+
+  th {
+    width: 5.9rem;
+  }
+
+  tr>th {
+    padding-bottom: 1.2rem;
+  }
+
+  tr>th+th,
+  tr>td+td {
+    padding-left: .4rem
+  }
+
+  tbody tr+tr>td {
+    padding-top: 1.2rem;
+  }
+
+  th {
+    text-align: left;
+    @include p4-secondary;
+    color: $c-text-quaternary;
+  }
+
+  tfoot td {
+    border-top-width: 1rem;
+  }
+
+  tfoot td,
+  tbody td {
+    @include p4-secondary;
+    color: $c-text-teriary;
+  }
+
+  tfoot td {
+    padding-top: 1rem;
+  }
+
+  tfoot td.results__table-result-text {
+    @include h1-secondary;
+    color: $c-text-teriary;
+    text-transform: uppercase;
+  }
+
+  tfoot td.results__table-result-price {
+    color: $c-other-primary;
+  }
+
+  &__text {
+    @include p4-secondary;
+    color: $c-text-quaternary;
+  }
+
+  @include br-tablet {
+    &__title {
+      @include h3;
+    }
+
+    th:nth-of-type(1) {
+      width: 20.7rem;
+    }
+
+    th {
+      width: 12.9rem;
+      @include p3;
+    }
+
+    tfoot td,
+    tbody td {
+      @include p3;
+    }
+
+    tfoot td {
+      padding-top: 1.6rem;
+    }
+  }
+
+  @include br-desktop {
+    th {
+      width: 9.6rem;
+    }
+  }
+}

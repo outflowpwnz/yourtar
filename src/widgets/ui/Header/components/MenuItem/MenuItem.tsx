@@ -1,7 +1,7 @@
-import { Link } from "react-router-dom"
-import { useBemCN } from "shared"
+import { useBemCN, scrollToAnchor } from "shared"
 import { TMenuItem } from "widgets"
 import './style.scss'
+import { HashLink } from "react-router-hash-link"
 
 type TProps = {
   menuItem: TMenuItem
@@ -11,12 +11,14 @@ export const MenuItem = (props: TProps) => {
   const menuItemBlock = useBemCN('menu-item')
   return (
     <div className={menuItemBlock()}>
-      <Link
+      <HashLink
         className={menuItemBlock('link')}
         to={props.menuItem.to}
+        smooth
+        scroll={scrollToAnchor}
       >
         {props.menuItem.label}
-      </Link>
+      </HashLink>
     </div>
   )
 }

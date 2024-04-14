@@ -1,0 +1,51 @@
+@import '/src/shared/styles/style.scss';
+
+.tabs {
+  display: grid;
+  gap: 1rem;
+
+  &__tab {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: transparent;
+    padding: 1.2rem 1.6rem;
+    box-shadow: 0 0 0 .2rem $c-line-secondary inset;
+    border-radius: .4rem;
+    transition: background-color $tt-primary ease;
+
+    &--active {
+      background-color: $c-line-secondary;
+    }
+  }
+
+  &__tab-label {
+    @include p2;
+    color: $c-text-teriary;
+  }
+
+  &__tab-icon {
+    margin-right: .8rem;
+
+    width: 2.4rem;
+    height: 2.4rem;
+
+    svg {
+      width: 100%;
+      height: 100%;
+      stroke: $c-accent-primary;
+    }
+  }
+
+
+  @include hover {
+    &__tab:hover {
+      background-color: $c-line-secondary;
+    }
+  }
+
+  @include br-tablet {
+    grid-template-columns: repeat(auto-fit, minmax(28.1rem, max-content));
+  }
+}

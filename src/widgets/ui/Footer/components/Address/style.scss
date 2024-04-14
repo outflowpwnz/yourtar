@@ -1,0 +1,14 @@
+@import '/src/shared/styles/style.scss';
+
+.address {
+  &__title {
+    @include p2;
+    color: $c-text-teriary;
+    margin-bottom: 1.8rem;
+  }
+
+  &__text {
+    @include p3;
+    color: $c-text-quaternary;
+  }
+}

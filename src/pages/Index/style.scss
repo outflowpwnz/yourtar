@@ -10,10 +10,58 @@
     margin-bottom: 13rem;
   }
 
+  &__about-project {
+    margin-bottom: 13rem;
+  }
+
+  &__benefits {
+    margin-bottom: 13rem;
+  }
+
+  &__faq {
+    margin-bottom: 13rem;
+  }
+
+  &__discuss-project {
+    margin-bottom: 15rem;
+  }
+
+  &__pricing {
+    margin-bottom: 13rem;
+  }
+
+  &__interaction-algorithm {
+    margin-bottom: 13rem;
+  }
+
   @include br-tablet {
     &__main {
       margin-top: 6rem;
       margin-bottom: 13rem;
+    }
+
+    &__about-project {
+      margin-bottom: 14rem;
+    }
+
+    &__benefits {
+      margin-bottom: 14rem;
+    }
+
+    &__interaction-algorithm {
+      margin-bottom: 14rem;
+    }
+
+    &__faq {
+      margin-bottom: 14rem;
+    }
+
+    &__pricing {
+      margin-bottom: 14rem;
+    }
+
+    &__discuss-project {
+      margin-bottom: 18rem;
     }
   }
 
@@ -25,6 +73,26 @@
 
     &__features {
       margin-bottom: 15rem;
+    }
+
+    &__benefits {
+      margin-bottom: 18rem;
+    }
+
+    &__pricing {
+      margin-bottom: 18rem;
+    }
+
+    &__faq {
+      margin-bottom: 18rem;
+    }
+
+    &__interaction-algorithm {
+      margin-bottom: 18rem;
+    }
+
+    &__about-project {
+      margin-bottom: 18rem;
     }
   }
 }

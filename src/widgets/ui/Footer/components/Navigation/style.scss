@@ -1,0 +1,14 @@
+@import '/src/shared/styles/style.scss';
+
+.navigation {
+  &__nav-list {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.2rem;
+  }
+
+  &__link {
+    @include p3;
+    color: $c-text-quaternary;
+  }
+}

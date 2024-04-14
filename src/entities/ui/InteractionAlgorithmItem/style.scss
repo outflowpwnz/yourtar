@@ -1,0 +1,41 @@
+@import '/src/shared/styles/style.scss';
+
+.interaction-algorithm-item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 1.6rem;
+  background-image: $c-gradient-1;
+  border-radius: .4rem;
+
+  &__title {
+    @include h3-tertiary;
+    margin-bottom: .5rem;
+    color: $c-text-quaternary;
+  }
+
+  &--theme-secondary {
+    box-shadow: 0 0 0 .2rem $c-line-secondary inset;
+    background-image: none;
+    background-color: $c-other-secondary;
+  }
+
+
+  &--theme-secondary &__title {
+    color: $c-accent-primary;
+  }
+
+  &__text {
+    @include p3;
+    color: $c-text-quaternary;
+  }
+
+  @include br-tablet {
+    min-height: 16.9rem;
+    padding: 2rem 1.6rem;
+
+    &__text {
+      @include p2;
+    }
+  }
+}

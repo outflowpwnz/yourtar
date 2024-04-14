@@ -1,6 +1,7 @@
 @import '/src/shared/styles/style.scss';
 
 .button {
+  width: 100%;
   position: relative;
   @include button;
   color: $c-text-teriary;
@@ -70,6 +71,7 @@
   }
 
   &--theme-quaternary {
+    width: fit-content;
     background-color: transparent;
     color: $c-accent-primary;
     padding: 0;

@@ -12,8 +12,8 @@ export const Menu = (props: TProps) => {
   return (
     <nav className={menuBlock()}>
       <ul className={menuBlock('list')}>
-        {props.menuItems.map((menuItem) =>
-          <li className={menuBlock('item')}>
+        {props.menuItems.map((menuItem, index) =>
+          <li className={menuBlock('item')} key={index}>
             <MenuItem menuItem={menuItem} />
           </li>
         )}

@@ -26,11 +26,12 @@ export const MobileMenu = (props: TProps) => {
           </div>
           <nav className={mobileMenuBlock('nav')}>
             <ul className={mobileMenuBlock('nav-list')}>
-              {props.menuItems.map((menuItem) =>
+              {props.menuItems.map((menuItem, index) =>
                 <li
+                  key={index}
                   className={mobileMenuBlock('nav-list-item')}
                 >
-                  <MobileMenuItem menuItem={menuItem} />
+                  <MobileMenuItem menuItem={menuItem} closeMenu={props.toggleMenu} />
                 </li>
               )}
             </ul>

@@ -1,0 +1,36 @@
+@import '/src/shared/styles/style.scss';
+
+.benefit {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1.6rem 1rem;
+
+  background-image: $c-gradient-1;
+  border-radius: .4rem;
+
+  &--theme-secondary {
+    box-shadow: 0 0 0 .2rem $c-line-secondary inset;
+    background-image: none;
+
+  }
+
+  height: 100%;
+  min-height: 13.7rem;
+
+  &__text {
+    text-align: center;
+    @include p3;
+    color: $c-text-quaternary;
+  }
+
+  @include br-tablet {
+    min-height: 14.8rem;
+  }
+
+  @include br-desktop {
+    &__text {
+      @include p2;
+    }
+  }
+}

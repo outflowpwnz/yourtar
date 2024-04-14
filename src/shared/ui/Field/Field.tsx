@@ -1,40 +1,28 @@
-import { Dispatch, FormEvent } from 'react';
-import { useBemCN } from 'shared';
+import { FormEvent, forwardRef } from 'react';
+import { EFieldType, TField, useBemCN } from 'shared';
 import { ReactComponent as FieldErrorIcon } from 'shared/assets/icons/field-error.svg'
 import './style.scss';
 import { FadeInOut } from '../FadeInOut/FadeInOut';
 
-export enum EFieldType {
-  TEXT = 'text',
-  PASSWORD = 'password',
-  EMAIL = 'email'
-}
+type TProps = TField
 
-type TProps = {
-  label: string;
-  type?: EFieldType;
-  id: string;
-  value: string;
-  onInput: Dispatch<React.SetStateAction<string>>
-  isError?: boolean;
-  errorMessage?: string;
-}
-
-export const Field = (props: TProps) => {
+export const Field = forwardRef<HTMLInputElement, TProps>((props: TProps, forwardedRef) => {
   const fieldBlock = useBemCN('field')
-  const onInput = (event: FormEvent<HTMLInputElement>) => {
+  const onChange = (event: FormEvent<HTMLInputElement>) => {
     const { value } = event.target as HTMLInputElement
-    props.onInput(value)
+    props.onChange?.(value)
   }
   return (
     <div
-      className={fieldBlock()}
+      className={fieldBlock({ theme: props.theme })}
     >
       <input
+        ref={forwardedRef}
+        inputMode={props.inputMode}
         placeholder=' '
         id={props.id}
         value={props.value}
-        onInput={onInput}
+        onChange={onChange}
         className={fieldBlock('input')}
         type={props.type || EFieldType.TEXT}
       />
@@ -56,4 +44,4 @@ export const Field = (props: TProps) => {
       </FadeInOut>
     </div>
   )
-}
+})
