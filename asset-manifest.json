@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/yourtar/static/css/main.557b9abc.css",
-    "main.js": "/yourtar/static/js/main.33b62852.js",
+    "main.js": "/yourtar/static/js/main.a860dab6.js",
     "static/js/453.54fc3d1a.chunk.js": "/yourtar/static/js/453.54fc3d1a.chunk.js",
     "static/media/Lato-Regular.woff2": "/yourtar/static/media/Lato-Regular.116f180c555613bf04f4.woff2",
     "static/media/Lato-Medium.woff2": "/yourtar/static/media/Lato-Medium.23364991b35b4485b88e.woff2",
@@ -36,11 +36,11 @@
     "static/media/check.svg": "/yourtar/static/media/check.b791b1bd32a0e85e36ab8b640fbec1a7.svg",
     "static/media/arrow-small.svg": "/yourtar/static/media/arrow-small.09c667f1f6badb796c80c42859846e12.svg",
     "main.557b9abc.css.map": "/yourtar/static/css/main.557b9abc.css.map",
-    "main.33b62852.js.map": "/yourtar/static/js/main.33b62852.js.map",
+    "main.a860dab6.js.map": "/yourtar/static/js/main.a860dab6.js.map",
     "453.54fc3d1a.chunk.js.map": "/yourtar/static/js/453.54fc3d1a.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.557b9abc.css",
-    "static/js/main.33b62852.js"
+    "static/js/main.a860dab6.js"
   ]
 }
