@@ -34,7 +34,7 @@ export const AboutProject = () => {
               className={aboutProjectBlock('video-player')}
             >
               <VideoPlayer
-                url="https://file-examples.com/storage/fe0e2ce82f660c1579f31b4/2017/04/file_example_MP4_1920_18MG.mp4"
+                url="https://file-examples.com/storage/feed2327706616bd9a07caa/2017/04/file_example_MP4_1920_18MG.mp4"
                 poster="https://i.pinimg.com/originals/fa/d0/3f/fad03f3c645a776a5f251057a40e5f34.png"
               />
             </div>
