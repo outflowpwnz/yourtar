@@ -1,6 +1,7 @@
 {
   "name": "yourtar",
   "version": "0.1.0",
+  "homepage": "https://outflowpwnz.github.io/yourtar",
   "private": true,
   "dependencies": {
     "@babel/core": "^7.16.0",
